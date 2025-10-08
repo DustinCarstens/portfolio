@@ -1,3 +1,31 @@
+// Mobile menu toggle
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+mobileMenuToggle.addEventListener('click', () => {
+    mobileMenuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target) && navMenu.classList.contains('active')) {
+        mobileMenuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -48,7 +76,9 @@ if (skillsSection) {
 // Create floating particles
 function createParticles() {
     const hero = document.querySelector('.hero');
-    for (let i = 0; i < 15; i++) {
+    const particleCount = window.innerWidth < 768 ? 8 : 15; // Fewer particles on mobile
+    
+    for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
         particle.style.width = Math.random() * 100 + 50 + 'px';
@@ -63,11 +93,13 @@ function createParticles() {
 
 createParticles();
 
-// Parallax effect on scroll
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.hero-content');
-    parallaxElements.forEach(el => {
-        el.style.transform = `translateY(${scrolled * 0.4}px)`;
+// Parallax effect on scroll (disabled on mobile for performance)
+if (window.innerWidth > 768) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const parallaxElements = document.querySelectorAll('.hero-content');
+        parallaxElements.forEach(el => {
+            el.style.transform = `translateY(${scrolled * 0.4}px)`;
+        });
     });
-});
+}
