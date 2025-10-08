@@ -11,7 +11,12 @@
 
     <nav id="navbar">
         <div class="logo">Dustin Carstens</div>
-        <ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -120,26 +125,24 @@
             </div>
         </div>
     </section>
-<section id="projects">
+
+    <section id="projects">
         <div class="section-content">
             <h2>Featured <span class="gradient-text">Projects</span></h2>
             <p style="text-align: center; color: #b0b0b0; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
                 Explore my data visualization and analytics projects showcasing business intelligence insights and interactive dashboards.
             </p>
             
-            <!-- PROJECT 1 -->
             <div class="project-card">
                 <h3 style="color: #667eea; margin-bottom: 1rem;">Children's Hospital Heat Map United States</h3>
                 <p style="color: #b0b0b0; margin-bottom: 1.5rem;">Vizualiztion created to help company identify regional hotspots for prospecting new hospital clients, vizualization was used to show investors potential business in US.</p>
                 
-                <!-- PASTE TABLEAU EMBED CODE BELOW -->
                 <div class="tableau-container">
                     <div style="text-align: center; padding: 3rem; background: rgba(255,255,255,0.05); border-radius: 10px;">
                         <p style="color: #888;">📊 Tableau Visualization</p>
                         <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;"><div class='tableauPlaceholder' id='viz1759520956737' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Lo&#47;LocationofChildrensHospitalswithintheU_S&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='LocationofChildrensHospitalswithintheU_S&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Lo&#47;LocationofChildrensHospitalswithintheU_S&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1759520956737');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></p>
                     </div>
                 </div>
-                <!-- END TABLEAU EMBED -->
                 
                 <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
                     <span style="background: rgba(102, 126, 234, 0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; color: #667eea;">Tableau</span>
@@ -148,8 +151,6 @@
                 </div>
             </div>
 
-            
-            <!-- View All Projects Button -->
             <div style="text-align: center; margin-top: 3rem;">
                 <a href="https://public.tableau.com/app/profile/dustin.carstens/vizzes" class="cta-button" target="_blank">
                     View All Projects on Tableau Public
@@ -157,8 +158,6 @@
             </div>
         </div>
     </section>
-
-
 
     <section id="resume">
         <div class="section-content">
@@ -168,7 +167,6 @@
                 <h3 style="margin-bottom: 1rem;">Professional Resume</h3>
                 <p style="color: #b0b0b0; margin-bottom: 2rem;">View my complete professional background, experience, and qualifications</p>
                 
-                <!-- UPDATE THIS LINE WITH YOUR RESUME LINK -->
                 <a href="https://drive.google.com/file/d/1J3Bvr33983pcnZcv_ExYPOpRut800Vj0/view?usp=sharing" class="upload-button" target="_blank">
                     View Resume (PDF)
                 </a>
@@ -184,10 +182,9 @@
             
                 <a href="mailto:carstensdustin@gmail.com" class="cta-button">Send Message</a>
 
-                
-<p style="color: #b0b0b0; margin-top: 2rem; font-size: 1.1rem;">
-    📧 <a href="mailto:carstensdustin@gmail.com" style="color: #667eea; text-decoration: none; font-weight: 500;">carstensdustin@gmail.com</a>
-</p>
+                <p style="color: #b0b0b0; margin-top: 2rem; font-size: 1.1rem;">
+                    📧 <a href="mailto:carstensdustin@gmail.com" style="color: #667eea; text-decoration: none; font-weight: 500;">carstensdustin@gmail.com</a>
+                </p>
 
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/dustin-carstens-677683162" title="LinkedIn" target="_blank">in</a>
@@ -200,12 +197,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
